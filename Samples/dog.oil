@@ -1,0 +1,29 @@
+-- تعريف TAG و COLOR
+TAG=BLACK
+Black=<COLOR#0.0.0>
+
+TAG=RED
+Red=<COLOR#1.0.0>
+
+-- تعريف Dog كـ table بدل class
+Dog = {}
+Dog.__index = Dog
+
+function Dog:new(o)
+    o = o or {}
+    setmetatable(o, Dog)
+    return o
+end
+
+function Dog:bark()
+    print("Woof! I am a dog.")
+    print("My color is:", Black.r, Black.g, Black.b)
+end
+
+-- إنشاء كائن من Dog
+local d = Dog:new()
+d:bark()
+
+-- تجربة z.compress
+local message = "Hello OilLua   Rocks"
+print("Compressed message:", z.compress(message))
