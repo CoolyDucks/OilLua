@@ -41,3 +41,21 @@ end
 
 local d = Dog:new()
 d:bark()
+
+
+# Tutorial 👌
+
+- Android (Termux Only)
+mkdir OilLua
+cd ~/OilLua
+git https://github.com/CoolyDucks/OilLua
+pkg install lua5.3
+lua oillua.lua YOURproject.oil
+
+- Linux
+
+pkg install lua5.3
+lua oillua.lua YOURproject.oil
+
+
+
