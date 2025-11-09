@@ -1,0 +1,19 @@
+-- Bomb Example
+TAG=BOMB
+Bomb=<COLOR#1.0.0>
+
+BombObj = {}
+BombObj.__index = BombObj
+
+function BombObj:new(power)
+    local o = {power=power}
+    setmetatable(o, BombObj)
+    return o
+end
+
+function BombObj:explode()
+    print("💥 Boom! Power:", self.power)
+end
+
+local b = BombObj:new(10)
+b:explode()
